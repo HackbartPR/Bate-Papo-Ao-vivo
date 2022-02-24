@@ -3,16 +3,25 @@ class Messages {
     //RESPONSÁVEL POR CRIAR UM ARRAY DE OBJETOS (MENSAGENS)
     constructor() {
       this.conversa = []
+      this.user = []
     }
   
     //LISTAR TODAS AS MENSAGENS
     list() {
       return [...this.conversa]
     }
-  
     //ADICIONAR UMA NOVA MENSAGEM NO ARRAY DE MENSAGENS
     add(objMessage) {
       return this.conversa.push(objMessage)
+    }
+
+    //LISTAR TODAS OS USUARIOS
+    listUser(){
+      return [...this.user]
+    }
+    //RESPONSÁVEL POR SALVAR O NOME DO USUARIO QUE ACABOU DE LOGAR
+    addUser(user){
+      return this.user.push(user)
     }
   }
   

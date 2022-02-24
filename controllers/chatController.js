@@ -12,10 +12,23 @@ function newMessage(io, data) {
   io.emit('updateMessage', messagesSaved.list())
 }
 
+//RECEBE A MENSAGEM DE UM NOVO USUARIO LOGADO
+function onNewUserLoged(io, user){  
+  //SALVAR O USUARIO RECEBIDO
+  messagesSaved.addUser(user)
+  //ENVIA O NOME DO NOVO USARIO LOGADO
+  io.emit('updateNewUser', messagesSaved.listUser())
+  //ENVIA PARA TODAS AS CONEXÕES TODAS AS MENSAGENS INSERIDAS
+  io.emit('updateMessage', messagesSaved.list())
+}
+
 //TODA VEZ QUE O EVENT LISTENER PERCEBER ALGUM EVENTO DE CONNECTION, ACIONARÁ ESTA FUNÇÃO
 function onConnection(io, socket) {
   //TODO EVENTO COM IDENTIFICAÇÃO DE NEWMESSAGE SERÁ ENVIADO PARA FUNÇÃO NEWMESSAGE
   socket.on('newMessage', (data) => {newMessage(io, data)})
+
+  socket.on('newUserLoged', (user)=>{onNewUserLoged(io, user)})
+  
 }
 
 module.exports = (server) => {

@@ -117,8 +117,8 @@
     border-bottom-right-radius: 10px;
     background-color: #fffafa;
     display: grid;
-    grid-template-areas: 'divChatContact' 'divChatMessage' 'divChatWrite';
-    grid-template-rows: 1fr 7fr 1fr;
+    grid-template-areas: 'divChatMessage' 'divChatWrite';
+    grid-template-rows: 7fr 1fr;
     padding: 1rem;
 }
 #mainBox > #divChat > #divChatContact{
@@ -130,26 +130,6 @@
     display: grid;
     grid-template-areas: 'divChatContactImage divChatContactName';
     grid-template-columns: 1fr 6fr;
-}
-#mainBox > #divChat > #divChatContact > #divChatContactImage{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    grid-area: divChatContactImage;
-    background-image: url('../images/user_chat.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-#mainBox > #divChat > #divChatContact > #divChatContactName{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    grid-area: divChatContactName;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
 }
 
 #mainBox > #divChat > #divChatMessage{
@@ -167,19 +147,17 @@
     flex-flow: column;
 
 }
-#divChatMessage > .message{
+
+#divChatMessage > .divChatMyMessageText{
     position: relative;
-    border: 1px solid #c850c0;
-    padding-top: 0.5rem;
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-    padding-bottom: 0.5rem;
-    margin-bottom: 10px;
-    font-size: large;
-    border-radius: 10px 40px 40px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
-#divChatMessage > .myMessage{
+#divChatMessage > .divChatMyMessageText > .myMessage{
     position: relative;
+    width: auto;
+    max-width: 80%;
     border: 1px solid #4158d0;
     padding-top: 0.5rem;
     padding-left: 1.2rem;
@@ -187,8 +165,35 @@
     padding-bottom: 0.5rem;
     margin-bottom: 10px;
     font-size: large;
-    border-radius: 40px 10px 50px 40px;
+    border-radius: 10px 40px 10px 40px;
 }
+#divChatMessage > .divChatMyMessageText > .messageMyInfo{
+    padding-right: 2rem;
+}
+
+#divChatMessage > .divChatMessageText{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#divChatMessage > .divChatMessageText > .message{
+    position: relative;
+    width: auto;
+    max-width: 80%;
+    border: 1px solid #c850c0;
+    padding-top: 0.5rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 10px;
+    font-size: large;
+    border-radius: 10px 40px 10px 40px;
+}
+#divChatMessage > .divChatMessageText > .messageInfo{
+    padding-left: 1rem;
+}
+
 #mainBox > #divChat > #divChatWrite{
     width: 100%;
     height: 100%;

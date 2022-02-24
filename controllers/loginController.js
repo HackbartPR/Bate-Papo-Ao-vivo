@@ -39,6 +39,7 @@ async function loginUser(req,res, next){
     try {
         //VERIFICAR SE O EMAIL ESTÁ CADASTRADO
         let userLoged = await User_Model.findOne({email: req.body.email})
+        
         if(!userLoged) return res.status(401).send(`Email ou senha incorreto!`)
 
         //VERIFICAR SE A SENHA É COMPATÍVEL COM O EMAIL
@@ -52,9 +53,9 @@ async function loginUser(req,res, next){
         req.body.token = token
 
         //ENVIA OS DADOS DO USUARIO PELOS COOKIES
-        res.cookie('token', token)
-        res.cookie('id', userLoged._id)
-        res.cookie('name', userLoged.name)
+        res.cookie('userToken', token)
+        res.cookie('userId', userLoged._id)
+        res.cookie('userName', userLoged.name)
 
         //VAI PARA O PRÓXIMO MIDLEWARE
         next()
