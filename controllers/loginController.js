@@ -54,6 +54,7 @@ async function loginUser(req,res, next){
         //ENVIA OS DADOS DO USUARIO PELOS COOKIES
         res.cookie('token', token)
         res.cookie('id', userLoged._id)
+        res.cookie('name', userLoged.name)
 
         //VAI PARA O PRÓXIMO MIDLEWARE
         next()
