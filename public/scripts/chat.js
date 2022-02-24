@@ -50,8 +50,11 @@ socket.on('updateNewUser', (arrayUser)=>{
         divUser.appendChild(userImage)
         divUser.appendChild(userName)
 
+        //ENQUANTO O NOME TIVER O CARACTERE ESPECIAL, O MESMO SERÁ SUBSTITUIDO POR ESPAÇO
+        while(user.match(/%20/)){user = user.replace("%20", " ")}
+        
         //ADICIONA O NOME DO USUARIO NA DIV
-        userName.innerText = user
+        userName.innerText =  user
 
         //ADICIONA A DIV CONTAINER DENTRO DA DIV PRINCIPAL DO USUARIO
         divContacts.appendChild(divUser)
