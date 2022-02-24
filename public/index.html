@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media</title>
+    <link href="./styles/loginStyle.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div id="box">
+        <div id="divKeypad"></div>
+        <div id="divForm">
+          <div id="divContainerForm">
+            <form id="formLogin" method="POST" action="/index">
+              <span>Bem Vindo</span>
+              <div id="divEmail">
+                <img class="img filter-green" src="./images/email.png" />
+                <input
+                  id="inputEmail"
+                  type="text"
+                  placeholder="Digite seu e-mail"
+                  name="email"
+                  required
+                />
+              </div>
+              <div id="divSenha">
+                <img class="img" src="./images/password.png" />
+                <input
+                  id="inputSenha"
+                  type="password"
+                  placeholder="Digite sua senha"
+                  name="password"
+                  required
+                />
+              </div>
+              <button id="submitButton">ENTRAR</button>
+            </form>
+            <div id="divForget">
+              <a href="#">Esqueceu a senha?</a>
+            </div>
+          </div>
+        </div>
+        <div id="divRegister">
+          <a href="/register.html">Cadastre-se</a>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(-135deg, #c850c0, #4158d0);
+  }
+  
+  .divBox {
+    width: 40vmin;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .divBox > span{
+    font-size: 4vmin;
+    font-family: 'Poppins', sans-serif; 
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .divBox > a{
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif; 
+      display: flex;
+      align-self: center;
+  }
+
+  .divBox > form{
+    
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+      
+  }
+
+  .divBox > form > div{
+    position: relative;
+    background-color: #e6e6e6;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+
+  } 
+
+  .divBox > form > div > input{
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+      padding: 10px;
+      border: none;
+      background-color: #e6e6e6;
+      width: 100%; 
+  }
+
+  .divBox > form > div > img{
+      width: 20px;
+  }
+  
+  .divBox > form > button{
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    font-size: 2vmin;
+    font-weight: bold;
+    color: white;
+    background-color: forestgreen;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  .divBox > form > button:hover{
+    background-color: #363636;
+    
+  }
+

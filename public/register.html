@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media</title>
+    <link href="./styles/registerStyle.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="divBox">
+          <span>Cadastro</span>
+          <form method="POST" action="/login/register">
+            <div id="divName">
+                <img src="./images/user.png">
+                <input name="name" type="text" placeholder="Digite seu nome completo">
+            </div>
+            <div id="divEmail">
+                <img src="./images/email.png">
+                <input name="email" type="text" placeholder="Digite seu email">
+            </div>
+            <div id="divPass">
+                <img src="./images/password.png">
+                <input name="password" type="password" placeholder="Digite sua senha">
+            </div>
+            <div id="divConfirmPass">
+                <img src="./images/password.png">
+                <input type="text" placeholder="Confirme sua senha">
+            </div>
+            <button class="buttonRegister">CADASTRAR</button>
+          </form>
+          <a href="/">Voltar</a>
+      </div>
+    </div>
+  </body>
+</html>

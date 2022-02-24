@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: linear-gradient(-135deg, #c850c0, #4158d0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainBox{
+    width: 70vw;
+    height: 80vh;
+    position: relative;
+    border-radius: 10px;
+    display: grid;
+    grid-template-areas: 'divInfo divChat';
+    grid-template-columns: 1fr 1.5fr;
+}
+
+#mainBox > #divInformation{
+    width: 100%;
+    height: 100%;
+    grid-area: divInfo;
+    position: relative;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #07a0c3;
+    display: grid;
+    grid-template-areas: 'divSearch' 'divContacts';
+    grid-template-rows: 0.5fr 4fr;
+    padding: 1rem;
+}
+#mainBox > #divInformation > #divContacts{
+    width: 100%;
+    height: 100%;
+    grid-area: divContacts;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.user{
+    margin-top: 1rem;
+    position: relative;
+    height: 10%;
+    display: grid;
+    grid-template-areas: 'userImage userName';
+    grid-template-columns: 1fr 4fr;
+    border-radius: 10px;
+    cursor:pointer;
+}
+.user:hover{
+    background-color: #05758f;    
+}
+.user > .userImage{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    grid-area: userImage;
+    background-image: url('../images/user_chat.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.user > .userName{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    grid-area: userName;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    
+}
+
+#mainBox > #divInformation > #divSearch{
+    width: 100%;
+    height: 100%;
+    grid-area: divSearch;
+    position: relative;
+    display: grid;
+    grid-template-areas: 'img input';
+    grid-template-columns: 1fr 5fr;
+    padding: 1rem;
+}
+#mainBox > #divInformation > #divSearch > span{
+    grid-area: img;
+    background-image: url('../images/search.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#mainBox > #divInformation > #divSearch > input{
+    grid-area: input;
+    background-color: #07a0c3;
+    border: none;
+    padding-left: 1rem;
+    font-size: large;
+}
+
+
+#mainBox > #divChat{
+    width: 100%;
+    height: 100%;
+    grid-area: divChat;
+    position: relative;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #fffafa;
+    display: grid;
+    grid-template-areas: 'divChatContact' 'divChatMessage' 'divChatWrite';
+    grid-template-rows: 1fr 7fr 1fr;
+    padding: 1rem;
+}
+#mainBox > #divChat > #divChatContact{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    grid-area: divChatContact;
+    padding: 1rem;
+    display: grid;
+    grid-template-areas: 'divChatContactImage divChatContactName';
+    grid-template-columns: 1fr 6fr;
+}
+#mainBox > #divChat > #divChatContact > #divChatContactImage{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    grid-area: divChatContactImage;
+    background-image: url('../images/user_chat.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#mainBox > #divChat > #divChatContact > #divChatContactName{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    grid-area: divChatContactName;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+#mainBox > #divChat > #divChatMessage{
+    width: 100%;
+    height: 100%;
+    min-height: 800px;
+    max-height: 800px;
+    position: relative;
+    grid-area: divChatMessage;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 1rem;
+    overflow-y:scroll;
+    display: flex;
+    flex-flow: column;
+
+}
+#divChatMessage > .message{
+    position: relative;
+    border: 1px solid #c850c0;
+    padding-top: 0.5rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 10px;
+    font-size: large;
+    border-radius: 10px 40px 10px 40px;
+}
+#divChatMessage > .myMessage{
+    position: relative;
+    border: 1px solid #4158d0;
+    padding-top: 0.5rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 10px;
+    font-size: large;
+    border-radius: 10px 40px 10px 40px;
+}
+#mainBox > #divChat > #divChatWrite{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    grid-area: divChatWrite;
+    padding: 1rem;
+    display: grid;
+    grid-template-areas: 'divChatWriteIcon inputWrite divChatWriteSend';
+    grid-template-columns: 1fr 6fr 1fr;
+}
+#mainBox > #divChat > #divChatWrite > #divChatWriteIcon{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    grid-area: divChatWriteIcon;
+    padding: 1rem;
+    background-image: url('../images/dots.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#mainBox > #divChat > #divChatWrite > input{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    grid-area: inputWrite;
+    padding: 1rem;
+    font-size: large;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+#mainBox > #divChat > #divChatWrite > #divChatWriteSend{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    grid-area: divChatWriteSend;
+    padding: 1rem;
+    background-image: url('../images/send.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
