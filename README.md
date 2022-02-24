@@ -1,4 +1,5 @@
 # Bate-Papo-Ao-vivo
+![Bate Papo Ao Vivo](https://user-images.githubusercontent.com/95001642/155595188-fc8633a3-ff15-4259-8083-29b26a67da92.gif)
 
 <h1>Sobre</h1>
 <p>Esta aplicação é um projeto de um <b>Bato Papo Ao Vivo</b>, o qual abrange tecnologias de <b>Back e Front End</b>.</p>
