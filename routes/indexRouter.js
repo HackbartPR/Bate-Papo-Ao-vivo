@@ -8,7 +8,5 @@ const path = 'D:/Programação/Bate Papo Ao vivo/Bate-Papo-Ao-vivo/public/chat.h
 //PÁGINA INICIAL APÓS REALIZAR O LOGIN
 router.post('/', express.json(), express.urlencoded({extended: true}), loginController.loginUser ,securityController.Authorization_Token, (req,res)=>{res.sendFile(path)})
 
-//FUNÇÃO PROVISÓRIA, DEVE SER EXCLUIDA
-router.use('/', express.static('public/chat.html'))
 module.exports = router
 
